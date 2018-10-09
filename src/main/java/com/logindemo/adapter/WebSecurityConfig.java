@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter {
             HttpSession session = request.getSession();
 
 //            判断是否已有该用户登录的session
-            if(session.getAttribute(SESSION_KEY) != null){
+            if(session.getAttribute(SESSION_KEY) != null && session.getAttribute(SESSION_KEY).equals("wenjie")){
                 return true;
             }
 

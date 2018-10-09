@@ -1,5 +1,6 @@
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
 
@@ -9,8 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - 404 Error</title>
-
+    <title>文件管理器</title>
+ <script src="/js/jquery.min.js"></script>
     <!-- Bootstrap core CSS-->
     <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,10 +19,10 @@
     <link href="/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="/css/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="/css/sb-admin.css" rel="stylesheet">
 
   </head>
 
@@ -119,6 +120,11 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/file/index">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>文件管理</span></a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
@@ -130,20 +136,7 @@
 
         <div class="container-fluid">
 
-          <!-- Breadcrumbs-->
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="index.html">Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">404 Error</li>
-          </ol>
-
-          <!-- Page Content -->
-          <h1 class="display-1">404</h1>
-          <p class="lead">Page not found. You can
-            <a href="javascript:history.back()">go back</a>
-            to the previous page, or
-            <a href="index.html">return home</a>.</p>
+          <sitemesh:write property='body'/>
 
         </div>
         <!-- /.container-fluid -->
@@ -152,7 +145,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>Copyright Â© Your Website 2018</span>
             </div>
           </div>
         </footer>
@@ -175,7 +168,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">Ã</span>
             </button>
           </div>
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
@@ -188,14 +181,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="js/jquery.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="js/jquery.easing.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.js"></script>
+    <script src="/js/sb-admin.js"></script>
 
   </body>
 

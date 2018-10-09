@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.logindemo.adapter.WebSecurityConfig;
 
 @Controller
-public class LoginController implements ErrorController{
+//ErrorController
+public class LoginController{
 	
 	@RequestMapping("/")
 	public String greeting(Model model){
@@ -19,11 +20,7 @@ public class LoginController implements ErrorController{
 		
 	}
 	
-	@RequestMapping("/error")
-	public String error(Model model){
-		return "404";
-		
-	}
+
 	
 	@RequestMapping("/login")
 	    public String login(){
@@ -34,15 +31,11 @@ public class LoginController implements ErrorController{
     public String loginVerify(String username,String password,HttpSession session){
         if ("wenjie".equals(username)) {
             session.setAttribute(WebSecurityConfig.SESSION_KEY, username);
-            return "index";
+            return "redirect:/";
         } else {
             return "redirect:/login";
         }
     }
 
-	@Override
-	public String getErrorPath() {
-		return "/error";
-	}
 
 }
